@@ -1,4 +1,5 @@
 import NavBar from "./NavBar"
+import '../styles/Header.css'
 
 function Header () {
 
@@ -6,7 +7,7 @@ function Header () {
 
         <>
         
-        <div className="container-fluid p-5 my-5 bg-success text-white">
+        <div className="container-fluid p-5 bg-success text-white">
 
             <h1>Clémentine - administration du site</h1>
 

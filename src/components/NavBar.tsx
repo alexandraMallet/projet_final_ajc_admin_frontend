@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/NavBar.css'
 
 function NavBar() {
 
@@ -15,9 +16,6 @@ function NavBar() {
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#">Compte Admin</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link disabled" href="#">Se connecter</a>
       </li>
       <li className="nav-item">
         <a className="nav-link disabled" href="#">Se déconnecter</a>

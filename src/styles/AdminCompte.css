@@ -1,0 +1,26 @@
+.admin-vue{
+    display: flex;
+    justify-content: space-around;
+}
+
+.mt-3{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+.card{
+    width: fit-content;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-top: 10px;
+}
+
+.btn-modif{
+    display: grid;
+    place-items: center;
+}
+
