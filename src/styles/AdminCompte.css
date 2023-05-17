@@ -11,13 +11,15 @@
 
 
 .card{
-    width: fit-content;
-    min-width: 300px;
+    /* width: fit-content;
+    min-width: 300px; */
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     justify-content:space-between;
     margin-top: 10px;
 }
+
+
 
 .btn-modif{
     display: grid;

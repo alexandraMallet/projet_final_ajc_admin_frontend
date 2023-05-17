@@ -11,8 +11,8 @@ function Connexion() {
 
     const navigate = useNavigate();
 
-    function versCompte() {
-        navigate('/compte');
+    function versHome() {
+        navigate('/pfobs');
     }
 
     const [login, setLogin] = useState({});
@@ -32,7 +32,7 @@ function Connexion() {
             const admin = await response.json();
             console.log(admin);
             sessionStorage.setItem("admin", JSON.stringify(admin));
-            versCompte();
+            versHome();
         }
         
         catch {

@@ -1,18 +1,42 @@
 import React from "react";
-import Connexion from "./Connexion";
+import { redirect, useNavigate } from "react-router-dom";
+import ListeArticles from "../components/ListeArticles";
+import ListeClients from "../components/ListeClients";
+import VersLogin from "../components/Redirect";
+
 
 
 function Home() {
+
+    function getAdminStorage() {
+
+        const adminStorage = sessionStorage.getItem("admin");
+
+
+        if (adminStorage == null) {
+            redirect('/pfobs/login');
+        } else {
+            return JSON.parse(adminStorage);
+        }
+    }
+
+    const admin = getAdminStorage();
+
     return (
-      <>
-  
-      <h1>BIENVENUE SUR LE SITE D'ADMINISTRATION DE LA BOUTIQUE CLEMENTINE</h1>
-  
-      <Connexion/>
-  
-  
-      </>
+
+
+        <>
+
+            {admin && <ListeArticles/>}
+
+            {admin && <ListeClients/>}
+
+
+            {!admin && <VersLogin/>}
+
+
+        </>
     );
-  }
-  
-  export default Home;
+}
+
+export default Home;

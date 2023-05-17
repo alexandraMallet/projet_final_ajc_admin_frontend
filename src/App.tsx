@@ -5,30 +5,34 @@ import './App.css';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Layout from './vues/Layout';
 import Home from './vues/Home';
 import AdminCompte from './vues/AdminCompte';
 import AdminModifCompte from './vues/AdminModifCompte';
+import Error404 from './vues/404';
+import Connexion from './vues/Connexion';
 
 function App() {
   return (
     <>
-      <Header />
+
+
 
       <BrowserRouter>
+      <Header />
+
         <Routes>
-          <Route path="/" element={<Layout />} />
-          <Route path="home" element={<Home/>}/>
-          <Route path="compte" element={<AdminCompte/>}/>
-          <Route path="modifcompte" element={<AdminModifCompte/>}/>
+          <Route path="/pfobs" element={<Home/>}/>
+          <Route path="/pfobs/login" element={<Connexion/>}/>
+          <Route path="/pfobs/compte" element={<AdminCompte/>}/>
+          <Route path="/pfobs/modifcompte" element={<AdminModifCompte/>}/>
+          <Route path="/pfobs/*" element={<Error404/>} />
+       </Routes>
 
+       <Footer />
 
-
-        </Routes>
 
       </BrowserRouter>
 
-      <Footer />
 
     </>
   );
