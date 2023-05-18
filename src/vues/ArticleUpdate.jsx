@@ -2,15 +2,15 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react"
 
-const ArticleUpdate = ()=>{
+const ArticleUpdate = () => {
     const navigate = useNavigate();
 
     const { id } = useParams();
     const [article, setArticle] = useState({});
     const [isformsubmit, setIsFormSubmit] = useState(false);
     useEffect(() => {
-       
-       
+
+
         fetch(`http://localhost:8080/pfobs/articlesapi/${id}`).then((res) => res.json()).then(data => setArticle(data));
         setIsFormSubmit(false);
     }, [])
@@ -24,23 +24,17 @@ const ArticleUpdate = ()=>{
     const handleSubmit = (event) => {
         event.preventDefault();
         fetch('http://localhost:8080/pfobs/articlesapi', requestOptions)
-        .then(setIsFormSubmit(true))
-        .then(navigate('/pfobs/articles'));
+            .then(setIsFormSubmit(true))
+            .then(navigate('/pfobs/articles'));
 
     }
-    return(
+    return (
         <>
-          <form onSubmit={handleSubmit}>
-                
-                <div>
-                    ID :
-                    <input
-                        type="number"
-                        name="id"
-                        onChange={(e) => setArticle({ ...article, 'id': e.target.value })}
-                        value={article && article.id}
-                    />
-                </div>
+
+            <h2>Modifier l'article {article.id} : </h2>
+
+            <form onSubmit={handleSubmit}>
+
                 <div>
                     MARQUE :
                     <input
@@ -48,16 +42,18 @@ const ArticleUpdate = ()=>{
                         name="marque"
                         onChange={(e) => setArticle({ ...article, 'marque': e.target.value })}
                         value={article && article.marque}
+                        required
                     />
                 </div>
-           
+
                 <div>
                     MODELE :
                     <input
                         type="text"
-                        name="model"
-                        onChange={(e) => setArticle({ ...article, 'marque': e.target.value })}
+                        name="modele"
+                        onChange={(e) => setArticle({ ...article, 'modele': e.target.value })}
                         value={article && article.modele}
+                        required
                     />
                 </div>
 
@@ -68,6 +64,7 @@ const ArticleUpdate = ()=>{
                         name="prix"
                         onChange={(e) => setArticle({ ...article, 'prix': e.target.value })}
                         value={article.prix}
+                        required
                     />
                 </div>
                 <div>
@@ -75,8 +72,9 @@ const ArticleUpdate = ()=>{
                     <input
                         type="text"
                         name="urlimg"
-                        onChange={(e) => setArticle({ ...article, 'marque': e.target.value })}
+                        onChange={(e) => setArticle({ ...article, 'urlimg': e.target.value })}
                         value={article && article.urlimg}
+                        required
                     />
                 </div>
                 <div>
@@ -84,15 +82,23 @@ const ArticleUpdate = ()=>{
                     <input
                         type="text"
                         name="catergorie"
-                        onChange={(e) => setArticle({ ...article, 'marque': e.target.value })}
+                        onChange={(e) => setArticle({ ...article, 'categorie': e.target.value })}
                         value={article && article.categorie}
+                        required
                     />
+
+                    <ul className="info-categories">
+                        <li>forfait internet, entrez : 0</li>
+                        <li>forfait mobile, entrez : 1</li>
+                        <li>smartphone, entrez : 2</li>
+                        <li>objet connecté, entrez : 3</li>
+                    </ul>
                 </div>
 
-                <button  type="submit" className="btn btn-success">Modifier</button>
-              
-        </form>
-           
+                <button type="submit" className="btn btn-success">Modifier</button>
+
+            </form>
+
         </>
     )
 }

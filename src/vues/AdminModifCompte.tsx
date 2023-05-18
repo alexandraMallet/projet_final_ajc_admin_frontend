@@ -1,7 +1,7 @@
 import React from "react"
-import ModifCompteForm from "../components/ModifCompteForm";
 import VersLogin from "../components/Redirect";
 import { redirect } from "react-router-dom";
+import AdminUpdate from "../components/AdminUpdate";
 
 function AdminModifCompte() {
 
@@ -24,7 +24,7 @@ function AdminModifCompte() {
 
         <>
 
-            {admin && <ModifCompteForm/>}
+            {admin && <AdminUpdate/>}
 
             {!admin && <VersLogin/>}
 

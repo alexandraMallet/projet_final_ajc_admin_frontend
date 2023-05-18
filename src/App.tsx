@@ -34,7 +34,7 @@ function App() {
           <Route path="/pfobs" element={<Home/>}/>
           <Route path="/pfobs/login" element={<Connexion/>}/>
           <Route path="/pfobs/compte" element={<AdminCompte/>}/>
-          <Route path="/pfobs/modifcompte" element={<AdminModifCompte/>}/>
+          <Route path="/pfobs/updateadmin/:id" element={<AdminModifCompte/>}/>
           <Route path="/pfobs/*" element={<Error404/>} />
 
           <Route path="/pfobs/articles" element={<ArticlesVue/>}/>
@@ -45,7 +45,7 @@ function App() {
           <Route path="/pfobs/clients" element={<ClientsVue/>}/>
           <Route path="/pfobs/clientcreate" element={<ClientCreate/>}/>
           <Route path="/pfobs/client/:id" element={<ClientVue/>}/>
-          <Route path="/pfobs/updateclient/id" element={<ClientUpdate/>}/>
+          <Route path="/pfobs/updateclient/:id" element={<ClientUpdate/>}/>
 
 
        </Routes>

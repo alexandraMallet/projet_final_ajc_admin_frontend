@@ -8,8 +8,8 @@ function ProfilAdmin() {
     function versLogin(){
         navigate('/pfobs/login');
     }
-    function update() {
-        navigate('/pfobs/modifcompte');
+    function updateAdmin(id) {
+        navigate('/pfobs/updateadmin/'+id);
     }
 
 
@@ -53,7 +53,7 @@ function ProfilAdmin() {
                 </div>
 
                 <div className="btn-modif">
-                    <button type="button" className="btn btn-success" onClick={update}>modifier mes informations</button>
+                    <button type="button" className="btn btn-success" onClick={() => updateAdmin(admin.id)}>modifier mes informations</button>
                 </div>
             </div>
         </>

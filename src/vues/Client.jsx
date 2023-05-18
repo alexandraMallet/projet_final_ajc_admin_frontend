@@ -19,7 +19,7 @@ function ClientVue() {
 
 
     function updateClient(id) {
-        navigate('/pfobs/updateclient/' + id);
+        navigate('/pfobs/updateclient/'+id);
     }
 
     const requestOptions = {
@@ -52,7 +52,7 @@ function ClientVue() {
                                         <th>mot de passe</th>
                                         <th>Nom</th>
                                         <th>Prénom</th>
-                                        <th>Coordonées</th>
+                                        <th>Coordonnées</th>
                                     </tr>
                                 </thead>
                                 <tbody>
