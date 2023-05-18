@@ -1,5 +1,6 @@
 import NavBar from "./NavBar"
 import '../styles/Header.css'
+import Logo2 from '../assets/Logo2.png'
 
 function Header () {
 
@@ -7,9 +8,10 @@ function Header () {
 
         <>
         
-        <div className="container-fluid p-5 bg-success text-white">
+        <div className="container-fluid p-5 text-white">
 
-            <h1>Clémentine - administration du site</h1>
+            <h1>Clémentine Bleue - administration du site</h1>
+            <img src={Logo2} alt="logo, une clémentine bleue orangée"/>
 
         </div>
         <NavBar/>

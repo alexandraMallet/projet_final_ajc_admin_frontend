@@ -10,7 +10,7 @@ function ArticlesVue() {
 
     useEffect(() => {
         fetch('http://localhost:8080/pfobs/articlesapi').then((res) => res.json()).then(data => setArticles(data));
-    }, [articles])
+    }, [])
 
 
     function versArticle(id){

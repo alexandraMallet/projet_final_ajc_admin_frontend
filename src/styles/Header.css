@@ -1,7 +1,18 @@
 .container-fluid {
     margin-bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 h1 {
     margin-bottom: 0px;
+}
+
+.p-5 {
+    background-color: lightskyblue;
+}
+
+img{
+    height: 150px;
 }

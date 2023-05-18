@@ -5,9 +5,7 @@ import '../styles/AdminCompte.css'
 function ProfilAdmin() {
 
     const navigate = useNavigate();
-    function versLogin(){
-        navigate('/pfobs/login');
-    }
+   
     function updateAdmin(id) {
         navigate('/pfobs/updateadmin/'+id);
     }

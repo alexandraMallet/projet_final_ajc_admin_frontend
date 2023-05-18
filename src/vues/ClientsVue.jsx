@@ -10,7 +10,7 @@ function ClientsVue() {
 
     useEffect(() => {
         fetch('http://localhost:8080/pfobs/clientsapi').then((res) => res.json()).then(data => setClients(data));
-    }, [clients])
+    }, [])
 
 
     function versClient(id){

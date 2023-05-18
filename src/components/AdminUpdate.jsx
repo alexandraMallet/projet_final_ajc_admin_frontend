@@ -25,6 +25,7 @@ const AdminUpdate = ()=>{
         event.preventDefault();
         fetch('http://localhost:8080/pfobs/admin', requestOptions)
         .then(setIsFormSubmit(true))
+        .then(sessionStorage.setItem("admin", JSON.stringify(admin)))
         .then(navigate('/pfobs'));
 
     }
@@ -32,7 +33,7 @@ const AdminUpdate = ()=>{
         <>
           <form onSubmit={handleSubmit}>
                 
-          <h2>Modifier le admin {admin.id} : </h2>
+          <h2>Modifier le compte de l'admin {admin.id} : </h2>
 
           <div>
                     UTILISATEUR :

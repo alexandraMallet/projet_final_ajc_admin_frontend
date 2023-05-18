@@ -5,7 +5,7 @@ function Footer(){
         
         <div className="container-fluid p-5 my-5 bg-success text-white">
 
-        <div className="contact">Hotline : help@clementine.com</div>
+        <div className="contact">Hotline : help@clementinebleue.com</div>
 
 
         </div>

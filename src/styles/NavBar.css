@@ -1,10 +1,15 @@
 .navbar {
     margin-top: 0px;
     margin-bottom: 20px;
+    background-color: coral;
 }
 
 img{
     object-fit: contain;
+}
+
+.container-fluid{
+    background-color: coral;
 }
 
 
