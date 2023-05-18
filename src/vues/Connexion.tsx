@@ -70,7 +70,7 @@ function Connexion() {
                         />
                     </div>
 
-                    <button type="submit" className="btn btn-success">Me connecter</button>
+                    <button type="submit" className="btn btn-info">Me connecter</button>
                 </form>
             </div>
 

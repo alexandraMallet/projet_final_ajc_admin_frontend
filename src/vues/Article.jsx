@@ -1,8 +1,28 @@
 import React, { useEffect, useState, useCallback } from "react"
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, redirect } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import AdminModifCompte from "./AdminModifCompte";
+import VersLogin from "../components/Redirect";
+
+
+function getAdminStorage() {
+
+    const adminStorage = sessionStorage.getItem("admin");
+
+
+    if (adminStorage == null) {
+        redirect('/pfobs/login');
+    } else {
+        return JSON.parse(adminStorage);
+    }
+}
+
+const admin = getAdminStorage();
+
 
 function ArticleVue() {
+
+
 
     const { id } = useParams();
 
@@ -36,6 +56,8 @@ function ArticleVue() {
 
     return (
         <>
+
+        {admin &&
 
             <div>
                 <div className="d-flex justify-content-center">
@@ -80,6 +102,10 @@ function ArticleVue() {
                 </div>
 
             </div >
+
+        }
+
+        {!admin && <VersLogin/>}
 
         </>
     )

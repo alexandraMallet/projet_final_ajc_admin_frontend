@@ -52,7 +52,7 @@ function ClientsVue() {
                                                 <td>{clients && client.prenom}</td>
                                                 <td>{clients && client.coordonnees}</td>
 
-                                            <td><button className="btn btn-success" onClick={() => versClient(client.id)}>Modifier ou supprimer</button></td>
+                                            <td><button className="btn btn-info" onClick={() => versClient(client.id)}>Modifier ou supprimer</button></td>
 
                                             </tr>
 

@@ -1,0 +1,14 @@
+.btn {
+    background-color: lightskyblue;
+    border-color: lightskyblue;
+    color:brown;
+}
+
+.btn-info:hover, .btn-primary:hover{
+    background-color: lightskyblue;
+    border-color: lightskyblue;
+}
+
+.marque, .model{
+    font-weight:600;
+}

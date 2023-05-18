@@ -27,7 +27,7 @@ function ProfilAdmin() {
     return (
         <>
             <div className="admin-vue">
-                <div className="container mt-3">
+                <div className="mt-3">
                     <h2>Mon compte admin</h2>
                     <div className="card">
                         <div className="card-body">identifiant :</div>
@@ -51,7 +51,7 @@ function ProfilAdmin() {
                 </div>
 
                 <div className="btn-modif">
-                    <button type="button" className="btn btn-success" onClick={() => updateAdmin(admin.id)}>modifier mes informations</button>
+                    <button type="button" className="btn btn-info" onClick={() => updateAdmin(admin.id)}>modifier mes informations</button>
                 </div>
             </div>
         </>

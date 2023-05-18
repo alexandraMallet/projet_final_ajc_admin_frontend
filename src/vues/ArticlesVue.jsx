@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react"
 import { useNavigate } from "react-router-dom";
+import '../styles/ArticlesVue.css'
 
 function ArticlesVue() {
 
@@ -46,13 +47,13 @@ function ArticlesVue() {
 
 
                                                 <td>{articles && article.id}</td>
-                                                <td>{articles && article.marque}</td>
-                                                <td>{articles && article.modele}</td>
+                                                <td className="marque">{articles && article.marque}</td>
+                                                <td className="model">{articles && article.modele}</td>
                                                 <td>{articles && article.urlimg}</td>
                                                 <td>{articles && article.prix}</td>
                                                 <td>{articles && article.categorie}</td>
 
-                                            <td><button className="btn btn-success" onClick={() => versArticle(article.id)}>Modifier ou supprimer</button></td>
+                                            <td><button className="btn btn-info" onClick={() => versArticle(article.id)}>Modifier ou supprimer</button></td>
 
                                             </tr>
 

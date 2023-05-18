@@ -1,11 +1,20 @@
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export default function Error404 () {
+
+export default function Error404() {
+
+    const navigate = useNavigate();
+
+    function versHome() {
+        navigate('/pfobs');
+    }
+
+
     return (
-        <div id="div404">
-            <p id="error404">404</p>
-            <h3>Oups! La page que vous demandez n'existe pas.</h3>
-            <NavLink id="navBack" to="/pfobs">Retourner sur la page d'accueil</NavLink>
+        <div className="container">
+            <h3>La page que vous demandez n'existe pas.</h3>
+
+            <button type="button" className="btn btn-info" onClick={versHome}>Retour à l'accueil</button>
         </div>
     )
 }

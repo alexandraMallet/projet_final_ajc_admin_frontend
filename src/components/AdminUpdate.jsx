@@ -31,6 +31,8 @@ const AdminUpdate = ()=>{
     }
     return(
         <>
+
+        <div className="container">
           <form onSubmit={handleSubmit}>
                 
           <h2>Modifier le compte de l'admin {admin.id} : </h2>
@@ -38,6 +40,7 @@ const AdminUpdate = ()=>{
           <div>
                     UTILISATEUR :
                     <input
+                        className="input"
                         type="text"
                         name="username"
                         onChange={(e) => setAdmin({ ...admin, 'username': e.target.value })}
@@ -48,6 +51,7 @@ const AdminUpdate = ()=>{
                 <div>
                     MOT DE PASSE :
                     <input
+                    className="input"
                         type="password"
                         name="password"
                         onChange={(e) => setAdmin({ ...admin, 'password': e.target.value })}
@@ -58,6 +62,7 @@ const AdminUpdate = ()=>{
                 <div>
                     NOM :
                     <input
+                    className="input"
                         type="text"
                         name="nom"
                         onChange={(e) => setAdmin({ ...admin, 'nom': e.target.value })}
@@ -68,6 +73,7 @@ const AdminUpdate = ()=>{
                 <div>
                     PRENOM :
                     <input
+                    className="input"
                         type="text"
                         name="prenom"
                         onChange={(e) => setAdmin({ ...admin, 'prenom': e.target.value })}
@@ -78,6 +84,7 @@ const AdminUpdate = ()=>{
                 {/* <div>
                     EMAIL :
                     <input
+                    className="input"
                         type="text"
                         name="email"
                         onChange={(e) => setAdmin({ ...admin, 'email': e.target.value })}
@@ -86,10 +93,10 @@ const AdminUpdate = ()=>{
                     />
                 </div> */}
 
-                <button  type="submit" className="btn btn-success">Modifier</button>
+                <button  type="submit" className="btn btn-info input">Modifier</button>
               
         </form>
-           
+           </div>
         </>
     )
 }

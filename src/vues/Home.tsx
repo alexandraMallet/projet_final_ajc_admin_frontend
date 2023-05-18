@@ -7,11 +7,11 @@ import VersLogin from "../components/Redirect";
 function Home() {
 
     const navigate = useNavigate();
-    function versArticles(){
+    function versArticles() {
         navigate('/pfobs/articles');
     }
 
-    function versClients(){
+    function versClients() {
         navigate('/pfobs/clients');
     }
 
@@ -33,28 +33,32 @@ function Home() {
 
 
         <>
+            <div className="container">
 
-            {admin &&
+                {admin &&
 
-                <div className="versArticles">
+                    <div className="versArticles">
 
-                    <div className="btn-vers-articles">
-                        <button type="button" className="btn btn-success" onClick={versArticles}>Gérer les articles</button>
+                        <div className="btn-vers-articles">
+                            <button type="button" className="btn btn-info" onClick={versArticles}>Gérer les articles</button>
+                        </div>
+
                     </div>
 
-                </div>
+                }
 
-            }
 
-            {admin && 
-            
-            <div className="versArticles">
+                {admin &&
 
-            <div className="btn-vers-articles">
-                <button type="button" className="btn btn-success" onClick={versClients}>Gérer les clients</button>
+                    <div className="versArticles">
+
+                        <div className="btn-vers-articles">
+                            <button type="button" className="btn btn-info" onClick={versClients}>Gérer les clients</button>
+                        </div>
+
+                    </div>}
+
             </div>
-
-        </div>}
 
 
 

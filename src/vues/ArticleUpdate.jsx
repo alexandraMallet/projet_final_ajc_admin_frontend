@@ -30,74 +30,80 @@ const ArticleUpdate = () => {
     }
     return (
         <>
+            <div className="container">
+                <h2>Modifier l'article {article.id} : </h2>
 
-            <h2>Modifier l'article {article.id} : </h2>
+                <form onSubmit={handleSubmit}>
 
-            <form onSubmit={handleSubmit}>
+                    <div>
+                        MARQUE :
+                        <input
+                            className="input"
+                            type="text"
+                            name="marque"
+                            onChange={(e) => setArticle({ ...article, 'marque': e.target.value })}
+                            value={article && article.marque}
+                            required
+                        />
+                    </div>
 
-                <div>
-                    MARQUE :
-                    <input
-                        type="text"
-                        name="marque"
-                        onChange={(e) => setArticle({ ...article, 'marque': e.target.value })}
-                        value={article && article.marque}
-                        required
-                    />
-                </div>
+                    <div>
+                        MODELE :
+                        <input
+                            className="input"
+                            type="text"
+                            name="modele"
+                            onChange={(e) => setArticle({ ...article, 'modele': e.target.value })}
+                            value={article && article.modele}
+                            required
+                        />
+                    </div>
 
-                <div>
-                    MODELE :
-                    <input
-                        type="text"
-                        name="modele"
-                        onChange={(e) => setArticle({ ...article, 'modele': e.target.value })}
-                        value={article && article.modele}
-                        required
-                    />
-                </div>
+                    <div>
+                        PRIX :
+                        <input
+                            className="input"
+                            type="number"
+                            name="prix"
+                            onChange={(e) => setArticle({ ...article, 'prix': e.target.value })}
+                            value={article.prix}
+                            required
+                        />
+                    </div>
+                    <div>
+                        URL IMAGE :
+                        <input
+                            className="input"
+                            type="text"
+                            name="urlimg"
+                            onChange={(e) => setArticle({ ...article, 'urlimg': e.target.value })}
+                            value={article && article.urlimg}
+                            required
+                        />
+                    </div>
+                    <div>
+                        CATEGORIE :
+                        <input
+                            className="input"
+                            type="text"
+                            name="catergorie"
+                            onChange={(e) => setArticle({ ...article, 'categorie': e.target.value })}
+                            value={article && article.categorie}
+                            required
+                        />
 
-                <div>
-                    PRIX :
-                    <input
-                        type="number"
-                        name="prix"
-                        onChange={(e) => setArticle({ ...article, 'prix': e.target.value })}
-                        value={article.prix}
-                        required
-                    />
-                </div>
-                <div>
-                    URL IMAGE :
-                    <input
-                        type="text"
-                        name="urlimg"
-                        onChange={(e) => setArticle({ ...article, 'urlimg': e.target.value })}
-                        value={article && article.urlimg}
-                        required
-                    />
-                </div>
-                <div>
-                    CATEGORIE :
-                    <input
-                        type="text"
-                        name="catergorie"
-                        onChange={(e) => setArticle({ ...article, 'categorie': e.target.value })}
-                        value={article && article.categorie}
-                        required
-                    />
+                        <ul className="info-categories">
+                            <li>forfait internet, entrez : 0</li>
+                            <li>forfait mobile, entrez : 1</li>
+                            <li>smartphone, entrez : 2</li>
+                            <li>objet connecté, entrez : 3</li>
+                        </ul>
+                    </div>
 
-                    <ul className="info-categories">
-                        <li>forfait internet, entrez : 0</li>
-                        <li>forfait mobile, entrez : 1</li>
-                        <li>smartphone, entrez : 2</li>
-                        <li>objet connecté, entrez : 3</li>
-                    </ul>
-                </div>
+                    <button type="submit" className="btn btn-info">Modifier</button>
 
-                <button type="submit" className="btn btn-success">Modifier</button>
-
-            </form>
+                </form>
+            </div>
 
         </>
     )
