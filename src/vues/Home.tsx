@@ -1,12 +1,19 @@
 import React from "react";
 import { redirect, useNavigate } from "react-router-dom";
-import ListeArticles from "../components/ListeArticles";
-import ListeClients from "../components/ListeClients";
 import VersLogin from "../components/Redirect";
 
 
 
 function Home() {
+
+    const navigate = useNavigate();
+    function versArticles(){
+        navigate('/pfobs/articles');
+    }
+
+    function versClients(){
+        navigate('/pfobs/clients');
+    }
 
     function getAdminStorage() {
 
@@ -27,12 +34,32 @@ function Home() {
 
         <>
 
-            {admin && <ListeArticles/>}
+            {admin &&
 
-            {admin && <ListeClients/>}
+                <div className="versArticles">
+
+                    <div className="btn-vers-articles">
+                        <button type="button" className="btn btn-success" onClick={versArticles}>Gérer les articles</button>
+                    </div>
+
+                </div>
+
+            }
+
+            {admin && 
+            
+            <div className="versArticles">
+
+            <div className="btn-vers-articles">
+                <button type="button" className="btn btn-success" onClick={versClients}>Gérer les clients</button>
+            </div>
+
+        </div>}
 
 
-            {!admin && <VersLogin/>}
+
+
+            {!admin && <VersLogin />}
 
 
         </>
