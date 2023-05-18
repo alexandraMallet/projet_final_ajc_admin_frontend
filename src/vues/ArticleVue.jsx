@@ -2,10 +2,10 @@ import React from "react"
 import { redirect } from 'react-router-dom';
 import '../styles/AdminCompte.css'
 import VersLogin from "../components/Redirect";
-import ArticlesComponent from "../components/ArticlesComponent";
+import ArticleComponent from "../components/ArticleComponent";
 
 
-function ArticlesVue() {
+function ArticleVue() {
 
    
     function getAdminStorage() {
@@ -27,7 +27,7 @@ function ArticlesVue() {
 
         <>
 
-            {admin && <ArticlesComponent/>}
+            {admin && <ArticleComponent/>}
 
             {!admin && <VersLogin/>}
 
@@ -36,4 +36,4 @@ function ArticlesVue() {
     )
 }
 
-export default ArticlesVue
+export default ArticleVue

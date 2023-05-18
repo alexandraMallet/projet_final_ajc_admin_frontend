@@ -13,7 +13,7 @@ import Connexion from './vues/Connexion';
 
 import ArticlesVue from './vues/ArticlesVue';
 import ArticleCreate from './vues/ArticleCreate';
-import ArticleVue from './vues/Article';
+import ArticleVue from './vues/ArticleVue';
 import ArticleUpdate from './vues/ArticleUpdate';
 
 import ClientsVue from './vues/ClientsVue';
