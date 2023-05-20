@@ -1,12 +1,24 @@
-import React, { useEffect, useState } from "react"
-import { useParams} from "react-router-dom";
+import React, { useEffect, useState, useCallback } from "react"
+import { Link, useParams, redirect } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 
+function getAdminStorage() {
+
+    const adminStorage = sessionStorage.getItem("admin");
 
 
+    if (adminStorage == null) {
+        redirect('/pfobs/login');
+    } else {
+        return JSON.parse(adminStorage);
+    }
+}
 
-function ArticleComponent() {
+const admin = getAdminStorage();
+
+
+function ArticleVue() {
 
 
 
@@ -95,4 +107,4 @@ function ArticleComponent() {
     )
 }
 
-export default ArticleComponent
+export default ArticleVue

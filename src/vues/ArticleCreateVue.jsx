@@ -1,16 +1,11 @@
-import React, {useEffect} from "react"
+import React from "react"
 import { redirect } from 'react-router-dom';
 import '../styles/AdminCompte.css'
 import VersLogin from "../components/Redirect";
-import ArticlesComponent from "../components/ArticlesComponent";
+import ArticleCreateComponent from "../components/ArticleCreateComponent";
 
 
-function ArticlesVue() {
-
-
-    useEffect(() => {
-        <ArticlesComponent/>
-    }, [])
+function ArticleCreateVue() {
 
    
     function getAdminStorage() {
@@ -32,7 +27,7 @@ function ArticlesVue() {
 
         <>
 
-            {admin && <ArticlesComponent/>}
+            {admin && <ArticleCreateComponent/>}
 
             {!admin && <VersLogin/>}
 
@@ -41,4 +36,4 @@ function ArticlesVue() {
     )
 }
 
-export default ArticlesVue
+export default ArticleCreateVue

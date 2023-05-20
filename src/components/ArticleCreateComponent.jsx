@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { useNavigate, redirect } from "react-router-dom";
-import VersLogin from "../components/Redirect";
-/* import 'bootstrap/dist/css/bootstrap.min.css'; */
 
 
 
 
 
-const ArticleCreate = () => {
+
+const ArticleCreateComponent = () => {
 
     function getAdminStorage() {
 
@@ -92,7 +91,7 @@ const ArticleCreate = () => {
                                 className="input"
                                 type="text"
                                 name="urlimg"
-                                onChange={(e) => setArticle({ ...article, 'urlimg': e.target.value })}
+                                onChange={(e) => setArticle({ ...article, 'urlimg': 'http://localhost:8080/pfobs/assets/'+e.target.value })}
                             />
                             <p className="input nomimg">nom complet avec extension, sans accents, par exemple : telephone.jpg -  Ajouter l'image correspondante dans le dossier "assets" sur le serveur</p>
                         </div>
@@ -115,9 +114,11 @@ const ArticleCreate = () => {
                         <button type="submit" className="btn btn-info">Créer l'article</button>
 
                     </form>
+
+                   
                 </div>
             
         </>
     )
 }
-export default ArticleCreate
+export default ArticleCreateComponent

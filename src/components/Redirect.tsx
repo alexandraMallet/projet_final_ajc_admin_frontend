@@ -12,7 +12,7 @@ function VersLogin() {
 
         <>
 
-            <div className="container">
+            <div className="container home-container redirect-container">
                 <p className="nomimg input">Contenu inaccessible hors connexion.</p>
 
                 <div className="btn-login input">

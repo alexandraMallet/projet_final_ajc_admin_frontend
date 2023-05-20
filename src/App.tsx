@@ -12,7 +12,6 @@ import Error404 from './vues/404';
 import Connexion from './vues/Connexion';
 
 import ArticlesVue from './vues/ArticlesVue';
-import ArticleCreate from './vues/ArticleCreate';
 import ArticleVue from './vues/ArticleVue';
 import ArticleUpdate from './vues/ArticleUpdate';
 
@@ -20,6 +19,7 @@ import ClientsVue from './vues/ClientsVue';
 import ClientVue from './vues/Client';
 import ClientCreate from './vues/ClientCreate';
 import ClientUpdate from './vues/ClientUpdate';
+import ArticleCreateVue from './vues/ArticleCreateVue';
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
           <Route path="/pfobs/*" element={<Error404/>} />
 
           <Route path="/pfobs/articles" element={<ArticlesVue/>}/>
-          <Route path="/pfobs/articlecreate" element={<ArticleCreate/>}/>
+          <Route path="/pfobs/articlecreate" element={<ArticleCreateVue/>}/>
           <Route path="/pfobs/article/:id" element={<ArticleVue/>}/>
           <Route path="/pfobs/updatearticle/:id" element={<ArticleUpdate/>}/>
 

@@ -45,7 +45,7 @@ function Connexion() {
 
         <>
 
-            <div className="container mt-3">
+            <div className="container mt-3 home-container">
                 <form onSubmit={seConnecter}>
                     <div className="mb-3">
                         <label htmlFor="username">utilisateur :</label>

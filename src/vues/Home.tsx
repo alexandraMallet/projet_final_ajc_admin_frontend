@@ -33,9 +33,16 @@ function Home() {
 
 
         <>
-            <div className="container">
 
-                {admin &&
+        <div className="containter">
+
+            <h1 className="main-title">Bienvenue sur l'administration du site BlueClementine ! </h1>
+        </div>
+
+        {admin && 
+            <div className="container home-container">
+
+                
 
                     <div className="versArticles">
 
@@ -45,10 +52,10 @@ function Home() {
 
                     </div>
 
-                }
+                
 
 
-                {admin &&
+                
 
                     <div className="versArticles">
 
@@ -56,11 +63,11 @@ function Home() {
                             <button type="button" className="btn btn-info" onClick={versClients}>Gérer les clients</button>
                         </div>
 
-                    </div>}
+                    </div>
 
             </div>
 
-
+        }
 
 
             {!admin && <VersLogin />}
