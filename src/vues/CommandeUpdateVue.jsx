@@ -1,16 +1,11 @@
-import React, {useEffect} from "react"
+import React from "react"
 import { redirect } from 'react-router-dom';
 import '../styles/AdminCompte.css'
 import VersLogin from "../components/Redirect";
-import ClientsComponent from "../components/ClientsComponent";
+import CommandeUpdateComponent from "../components/CommandeUpdateComponent";
 
 
-function ClientsVue() {
-
-
-    useEffect(() => {
-        <ClientsComponent/>
-    }, [])
+function CommandeUpdateVue() {
 
    
     function getAdminStorage() {
@@ -32,7 +27,7 @@ function ClientsVue() {
 
         <>
 
-            {admin && <ClientsComponent/>}
+            {admin && <CommandeUpdateComponent/>}
 
             {!admin && <VersLogin/>}
 
@@ -41,4 +36,4 @@ function ClientsVue() {
     )
 }
 
-export default ClientsVue
+export default CommandeUpdateVue

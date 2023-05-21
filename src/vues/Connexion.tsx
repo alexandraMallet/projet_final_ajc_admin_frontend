@@ -45,7 +45,7 @@ function Connexion() {
 
         <>
 
-            <div className="container mt-3 home-container">
+            <div className="container mt-3 home-container ">
                 <form onSubmit={seConnecter}>
                     <div className="mb-3">
                         <label htmlFor="username">utilisateur :</label>
@@ -56,6 +56,7 @@ function Connexion() {
                             placeholder="votre nom d'utilisateur"
                             name="username"
                             onChange={(e) => setLogin({ ...login, 'username': e.target.value })}
+                            required
                         />
                     </div>
                     <div className="mb-3">
@@ -67,6 +68,7 @@ function Connexion() {
                             placeholder="votre mot de passe"
                             name="pswd"
                             onChange={(e) => setLogin({ ...login, 'password': e.target.value })}
+                            required
                         />
                     </div>
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react"
 import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import CommandesParClientComponent from "../components/CommandesParClientComponent";
 
 function ClientVue() {
 
@@ -12,14 +13,17 @@ function ClientVue() {
     const [client, setClient] = useState([]);
 
 
+
     useEffect(() => {
         fetch(`http://localhost:8080/pfobs/clientsapi/${id}`).then((res) => res.json()).then(data => setClient(data));
     }, [])
 
 
 
+
+
     function updateClient(id) {
-        navigate('/pfobs/updateclient/'+id);
+        navigate('/pfobs/updateclient/' + id);
     }
 
     const requestOptions = {
@@ -41,14 +45,14 @@ function ClientVue() {
                 <div className="d-flex justify-content-center">
                     <div id="personnesArray" className="card m-5">
                         <div className="card-header">
-                            <h2>Client demandé : </h2>
+                            <h2>Client·e demandé·e : </h2>
                         </div>
                         <div className="card-body">
                             <table className="table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>nom d'utilisateur</th>
+                                        <th>nom d'utilisateur·ice</th>
                                         <th>mot de passe</th>
                                         <th>Nom</th>
                                         <th>Prénom</th>
@@ -81,6 +85,9 @@ function ClientVue() {
 
             </div >
 
+           {client && <CommandesParClientComponent idClient={id}/> }
+
+            
         </>
     )
 }

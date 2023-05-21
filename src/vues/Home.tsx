@@ -15,6 +15,10 @@ function Home() {
         navigate('/pfobs/clients');
     }
 
+    function versCommandes(){
+        navigate('/pfobs/commandes');
+    }
+
     function getAdminStorage() {
 
         const adminStorage = sessionStorage.getItem("admin");
@@ -34,9 +38,9 @@ function Home() {
 
         <>
 
-        <div className="containter">
+        <div className="containter ">
 
-            <h1 className="main-title">Bienvenue sur l'administration du site BlueClementine ! </h1>
+            <h1 className="main-title">Bienvenue {admin && admin.username} sur l'administration du site BlueClementine ! </h1>
         </div>
 
         {admin && 
@@ -44,7 +48,7 @@ function Home() {
 
                 
 
-                    <div className="versArticles">
+                    <div className="vers-articles">
 
                         <div className="btn-vers-articles">
                             <button type="button" className="btn btn-info" onClick={versArticles}>Gérer les articles</button>
@@ -57,10 +61,18 @@ function Home() {
 
                 
 
-                    <div className="versArticles">
+                    <div className="vers-articles">
 
                         <div className="btn-vers-articles">
-                            <button type="button" className="btn btn-info" onClick={versClients}>Gérer les clients</button>
+                            <button type="button" className="btn btn-info" onClick={versClients}>Gérer les client·e·s</button>
+                        </div>
+
+                    </div>
+
+                    <div className="vers-articles">
+
+                        <div className="btn-vers-articles">
+                            <button type="button" className="btn btn-info" onClick={versClients}>Gérer les commandes</button>
                         </div>
 
                     </div>

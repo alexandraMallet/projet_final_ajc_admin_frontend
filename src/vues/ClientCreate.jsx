@@ -27,7 +27,7 @@ const ClientCreate = () => {
                 <form onSubmit={handleSubmit}>
 
                     <div>
-                        UTILISATEUR :
+                        UTILISATEUR·ICE :
                         <input
                             className="input"
                             type="text"
@@ -42,6 +42,7 @@ const ClientCreate = () => {
                             type="password"
                             name="password"
                             onChange={(e) => setClient({ ...client, 'password': e.target.value })}
+                            required
                         />
                     </div>
                     <div>
@@ -51,6 +52,7 @@ const ClientCreate = () => {
                             type="text"
                             name="nom"
                             onChange={(e) => setClient({ ...client, 'nom': e.target.value })}
+                            required
                         />
                     </div>
                     <div>
@@ -60,6 +62,7 @@ const ClientCreate = () => {
                             type="text"
                             name="prenom"
                             onChange={(e) => setClient({ ...client, 'prenom': e.target.value })}
+                            required
                         />
                     </div>
                     <div>
@@ -69,11 +72,12 @@ const ClientCreate = () => {
                             type="text"
                             name="coordonnees"
                             onChange={(e) => setClient({ ...client, 'coordonnees': e.target.value })}
+                            required
                         />
 
                     </div>
 
-                    <button type="submit" className="btn btn-info input">Créer le client-test</button>
+                    <button type="submit" className="btn btn-info input">Créer le/la client·e -test</button>
 
                 </form>
             </div>

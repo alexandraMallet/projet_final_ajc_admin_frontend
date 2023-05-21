@@ -20,8 +20,12 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link to='/pfobs/articles' className="nav-link active">Gérer les articles</Link>
-            </li><li className="nav-item">
-              <Link to='/pfobs/clients' className="nav-link active">Gérer les clients</Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/pfobs/clients' className="nav-link active">Gérer les client·e·s</Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/pfobs/commandes' className="nav-link active">Gérer les commandes</Link>
             </li>
             <li className="nav-item">
               <Link to='/pfobs/login' className="nav-link active">Se déconnecter</Link>

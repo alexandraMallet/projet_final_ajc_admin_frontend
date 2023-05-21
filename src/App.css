@@ -32,6 +32,22 @@
   margin-top: 150px;
 }
 
+.margin-top-50 {
+  margin-top:50px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.big-input{
+  width: 500px;
+}
+
+.vers-articles{
+  margin-top:40px;
+}
+
 
 /* @keyframes App-logo-spin {
   from {

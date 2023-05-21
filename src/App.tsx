@@ -20,6 +20,9 @@ import ClientVue from './vues/Client';
 import ClientCreate from './vues/ClientCreate';
 import ClientUpdate from './vues/ClientUpdate';
 import ArticleCreateVue from './vues/ArticleCreateVue';
+import CommandesVue from './vues/CommandesVue';
+import CommandeUpdateVue from './vues/CommandeUpdateVue';
+import CommandeVue from './vues/CommandeVue';
 
 function App() {
   return (
@@ -46,6 +49,12 @@ function App() {
           <Route path="/pfobs/clientcreate" element={<ClientCreate/>}/>
           <Route path="/pfobs/client/:id" element={<ClientVue/>}/>
           <Route path="/pfobs/updateclient/:id" element={<ClientUpdate/>}/>
+
+
+          <Route path="/pfobs/commandes" element={<CommandesVue/>}/>
+          <Route path="/pfobs/commande/:id" element={<CommandeVue/>}/>
+          <Route path="/pfobs/updatecommande/:id" element={<CommandeUpdateVue/>}/>
+
 
 
        </Routes>

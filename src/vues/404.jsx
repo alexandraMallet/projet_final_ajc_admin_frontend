@@ -11,7 +11,7 @@ export default function Error404() {
 
 
     return (
-        <div className="container">
+        <div className="container home-container redirect-container">
             <h3>La page que vous demandez n'existe pas.</h3>
 
             <button type="button" className="btn btn-info" onClick={versHome}>Retour à l'accueil</button>

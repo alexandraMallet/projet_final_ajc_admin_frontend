@@ -2,14 +2,14 @@ import React, {useEffect} from "react"
 import { redirect } from 'react-router-dom';
 import '../styles/AdminCompte.css'
 import VersLogin from "../components/Redirect";
-import ClientsComponent from "../components/ClientsComponent";
+import CommandeComponent from "../components/CommandeComponent";
 
 
-function ClientsVue() {
+function CommandeVue() {
 
 
     useEffect(() => {
-        <ClientsComponent/>
+        <CommandeComponent/>
     }, [])
 
    
@@ -32,7 +32,7 @@ function ClientsVue() {
 
         <>
 
-            {admin && <ClientsComponent/>}
+            {admin && <CommandeComponent/>}
 
             {!admin && <VersLogin/>}
 
@@ -41,4 +41,4 @@ function ClientsVue() {
     )
 }
 
-export default ClientsVue
+export default CommandeVue

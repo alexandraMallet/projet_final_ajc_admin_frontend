@@ -1,12 +1,45 @@
 import React, { useState} from "react";
 import { useNavigate, redirect } from "react-router-dom";
+import axios from "axios";
 
 
 
 
 
 
-const ArticleCreateComponent = () => {
+const ArticleCreateComponentTest = () => {
+
+
+//    function envoyerImage() {
+
+//         let formData = new FormData();
+
+       
+//         formData.append('file', this.file)
+
+//         axios.post('http://localhost:8080/pfobs/upload',
+//             formData,
+//             {
+//                 headers: {
+//                     'Content-Type': 'application/json'
+//                 }
+//             }
+//         )
+//             .catch(function () {
+//                 console.log('erreur');
+//             });
+//     }
+
+//     function handleFileUpload(event) {
+//         this.file = event.target.files[0];
+//         this.imagePreview(this.file)
+//     }
+//     function imagePreview(file) {
+//         let reader = new FileReader();
+//         reader.onload = event => {
+//             this.imageUrl = event.target.result
+//         }
+//         reader.readAsDataURL(file)
 
     function getAdminStorage() {
 
@@ -65,7 +98,6 @@ const ArticleCreateComponent = () => {
                                 type="text"
                                 name="marque"
                                 onChange={(e) => setArticle({ ...article, 'marque': e.target.value })}
-                                required
                             />
                         </div>
                         <div>
@@ -75,7 +107,6 @@ const ArticleCreateComponent = () => {
                                 type="text"
                                 name="modele"
                                 onChange={(e) => setArticle({ ...article, 'modele': e.target.value })}
-                                required
                             />
                         </div>
                         <div>
@@ -85,7 +116,6 @@ const ArticleCreateComponent = () => {
                                 type="number"
                                 name="prix"
                                 onChange={(e) => setArticle({ ...article, 'prix': e.target.value })}
-                                required
                             />
                         </div>
                         <div>
@@ -95,7 +125,6 @@ const ArticleCreateComponent = () => {
                                 type="text"
                                 name="urlimg"
                                 onChange={(e) => setArticle({ ...article, 'urlimg': 'http://localhost:8080/pfobs/assets/'+e.target.value })}
-                                required
                             />
                             <p className="input nomimg">nom complet avec extension, sans accents, par exemple : telephone.jpg -  Ajouter l'image correspondante dans le dossier "assets" sur le serveur</p>
                         </div>
@@ -106,7 +135,6 @@ const ArticleCreateComponent = () => {
                                 type="text"
                                 name="categorie"
                                 onChange={(e) => e.target.value < 4 ? setArticle({ ...article, 'categorie': e.target.value }) : alert("vous devez saisir 0, 1, 2 ou 3")}
-                                required
                             />
                             <ul className="info-categories">
                                 <li>forfait internet, entrez : 0</li>
@@ -115,6 +143,11 @@ const ArticleCreateComponent = () => {
                                 <li>objet connecté, entrez : 3</li>
                             </ul>
                         </div>
+
+                        <form onSubmit={envoyerImage}>
+                        <button type="submit" className="btn btn-info">Enregistrer l'image</button>
+
+                        </form>
 
                         <button type="submit" className="btn btn-info">Créer l'article</button>
 
@@ -126,4 +159,4 @@ const ArticleCreateComponent = () => {
         </>
     )
 }
-export default ArticleCreateComponent
+export default ArticleCreateComponentTest
