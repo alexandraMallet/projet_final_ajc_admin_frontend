@@ -119,7 +119,7 @@ const ArticleCreateComponentTest = () => {
                             onChange={(e) => setArticle({ ...article, 'urlimg': 'http://localhost:8080/pfobs/assets/' + e.target.value })}
                             required
                         />
-                        <p className="input nomimg">nom complet avec extension, sans accents, par exemple : telephone.jpg -  Ajouter l'image correspondante dans le dossier "assets" sur le serveur</p>
+                        <p className="input nomimg">nom complet avec extension, sans accents, par exemple : telephone.jpg</p>
                     </div>
                     <div>
                         CATEGORIE :
