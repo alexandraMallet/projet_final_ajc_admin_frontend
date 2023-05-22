@@ -37,7 +37,7 @@ function ArticleVue() {
 
   
     function updateArticle(id){
-        navigate('/pfobs/updatearticle/'+id);
+        navigate('/pfobs/articleupdate/'+id);
     }
 
     const requestOptions = {

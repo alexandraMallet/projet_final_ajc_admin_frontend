@@ -33,6 +33,7 @@ const ClientCreate = () => {
                             type="text"
                             name="username"
                             onChange={(e) => setClient({ ...client, 'username': e.target.value })}
+                            required
                         />
                     </div>
                     <div>

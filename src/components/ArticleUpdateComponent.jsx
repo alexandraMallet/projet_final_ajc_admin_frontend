@@ -2,7 +2,7 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react"
 
-const ArticleUpdate = () => {
+const ArticleUpdateComponent = () => {
     const navigate = useNavigate();
 
     const { id } = useParams();
@@ -108,6 +108,6 @@ const ArticleUpdate = () => {
         </>
     )
 }
-export default ArticleUpdate
+export default ArticleUpdateComponent
 
 
