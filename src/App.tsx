@@ -24,6 +24,7 @@ import ClientUpdate from './vues/ClientUpdate';
 import CommandesVue from './vues/CommandesVue';
 import CommandeUpdateVue from './vues/CommandeUpdateVue';
 import CommandeVue from './vues/CommandeVue';
+import ArticleCreateComponentTest from './components/ArticleCreateComponentTest';
 
 function App() {
   return (
@@ -55,6 +56,8 @@ function App() {
           <Route path="/pfobs/commandes" element={<CommandesVue/>}/>
           <Route path="/pfobs/commande/:id" element={<CommandeVue/>}/>
           <Route path="/pfobs/updatecommande/:id" element={<CommandeUpdateVue/>}/>
+
+          <Route path="/pfobs/test" element={<ArticleCreateComponentTest/>}/>
 
 
 
